@@ -1,0 +1,290 @@
+.portfolio-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  background-image: linear-gradient(to bottom, #f0f4f8, #e6ebf1);
+}
+
+.portfolio-form {
+  width: 100%;
+  max-width: 800px;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-form h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.portfolio-form h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  border-radius: 2px;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid #eaeef5;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #2c3e50; /* Changed from light blue to darker for better visibility */
+  margin-bottom: 1.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: #2c3e50; /* Darkened for better contrast */
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.dynamic-card input,
+.dynamic-card textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+  font-family: inherit;
+  color: #2c3e50; /* Explicitly set text color */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.dynamic-card input::placeholder,
+.dynamic-card textarea::placeholder {
+  color: #a0aec0; /* Lighter color for placeholder text */
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.dynamic-card input:focus,
+.dynamic-card textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea,
+.dynamic-card textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.error-message {
+  display: block;
+  margin-top: 0.5rem;
+  color: #e53e3e;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding-left: 0.5rem;
+}
+
+.dynamic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dynamic-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+  position: relative;
+  color: #2c3e50; /* Ensure text is visible in cards */
+}
+
+.dynamic-card:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.add-btn,
+.remove-btn {
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff; /* Ensure button text is white */
+}
+
+.add-btn {
+  background-color: #3498db;
+  color: white;
+  border: 1px solid #2980b9;
+}
+
+.add-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.remove-btn {
+  background-color: #e53e3e;
+  color: white;
+  border: 1px solid #c53030;
+  margin-top: 0.5rem;
+}
+
+.remove-btn:hover {
+  background-color: #c53030;
+  transform: translateY(-1px);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1.1rem;
+  background: linear-gradient(to right, #3498db, #4a9fe0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #2c7be5, #3d8ae5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Explicitly set text color for all content */
+.form-group p,
+.dynamic-card p,
+.input-group p {
+  color: #4a5568; /* Dark gray for paragraph text */
+}
+
+@media (max-width: 768px) {
+  .portfolio-form {
+    padding: 2rem;
+  }
+  
+  .portfolio-form h2 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-form {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .portfolio-form h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dynamic-card {
+    padding: 1.25rem;
+  }
+  
+  .add-btn,
+  .remove-btn {
+    padding: 0.6rem 1.2rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .submit-button {
+    padding: 1rem;
+    font-size: 1.05rem;
+  }
+}
